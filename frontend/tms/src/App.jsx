@@ -1,7 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import RegistrationForm from './components/Registration/RegistrationForm';
-import Home from './components/Home'; // Your existing home component
+import Home from './components/Home';
 import RestaurantList from './components/Restaurant/RestaurantList';
 import RestaurantDetail from './components/Restaurant/RestaurantDetail';
 
@@ -11,7 +11,6 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/register" element={<RegistrationForm />} />
-                {/*Routes for restaurant discovery */}
                 <Route path="/restaurants" element={<RestaurantList />} />
                 <Route path="/restaurants/:id" element={<RestaurantDetail />} />
             </Routes>
